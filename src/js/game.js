@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (key === 'ENTER') {
                 handleEnter();
-            } else if (key === '⌫') {
+            } else if (button.id === 'backspace') {
                 handleDelete();
             } else if (/^[A-Z]$/.test(key)) { // Permite apenas letras A-Z
                 handleKeyboardInput(key);
