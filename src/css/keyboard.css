@@ -1,0 +1,50 @@
+.row1,
+.row2,
+.row3 {
+    display: flex;
+    margin: 0 auto 8px;
+    touch-action: manipulation;   
+}
+
+button {
+    width: 40px;
+    height: 58px;
+    font-size: 1.25em; 
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 0 6px 0 0;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    color: black;
+}
+
+.enter, .delete{
+    flex: 2;
+    width: 70px;
+}
+
+.row2 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.enter { 
+    font-size: 10px;
+}
+
+.keyboard {
+    height: var(--keyboard-height);
+    margin: 0 8px;
+    user-select: none;
+    display: grid;
+    padding: 30px;
+}
+
+.keyCentralizer {
+    display: flex;
+    justify-content: center;
+}

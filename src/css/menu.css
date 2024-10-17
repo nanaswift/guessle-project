@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap');
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: red 2px solid; */
+
+    img {
+        width: 90px;
+    }
+
+    h1 {
+        letter-spacing: 10px;
+        margin-left: 2px;
+        font-family: "Ruda", sans-serif;
+        font-size: 60px;
+    }
+}
+
+.containerMenu {
+    position: fixed; /* Fixa o popup na tela */
+    top: 0; /* Início do topo da tela */
+    left: 0; /* Início do lado esquerdo da tela */
+    width: 100%; /* Largura total da tela */
+    height: 100%; /* Altura total da tela */
+    background-color: #333333f5; /* Fundo escuro e mais opaco */
+    display: flex; /* Flexbox para centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    z-index: 901; /* Garante que o popup esteja acima de outros elementos */
+    
+}
+
+.menuTxt {
+    font-family: "Red Hat Display";
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    word-spacing: 4px;
+    text-align: center;
+    width: 400px;
+
+    h2 {
+        padding-top: 15px;
+    }
+    
+}
+
+.menuContent {
+    width: 400px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+
+.menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}

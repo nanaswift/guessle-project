@@ -1,0 +1,252 @@
+/* Media Query para dispositivos menores que 424px (M) */
+@media (max-width: 424px) {
+    .keyboard {
+        padding: 0px;
+        padding-top: 10px;
+
+        .keys {
+            width: 28px;
+            height: 40px;
+            font-size: 15px;
+        }
+
+        .enter,
+        .delete {
+            width: 45px;
+            height: 40px;
+            
+        }
+
+        .enter {
+            font-size: 11px;
+        }
+
+        .delete {
+            font-size: 14px;
+        }
+    }
+
+
+    .grid {
+        max-width: 300px;
+        height: 400px;
+
+
+        .row {
+            max-height: 56px;
+        }
+    }
+
+    .message {
+        top: 15%;
+    }
+
+    footer {
+        .credits {
+            font-size: 15px;
+        }
+    }
+
+    .gameName {
+        justify-content: start;
+
+        h1 {
+            font-size: 30px;
+            letter-spacing: 5px;
+
+
+        }
+
+        img {
+            width: 45px;
+        }
+    }
+
+    .menuContent {
+        width: 275px;
+
+        .logo {
+            h1 {
+                font-size: 45px;
+                letter-spacing: 5px;
+            }
+
+        }
+
+        img {
+            width: 60px;
+        }
+
+        .menuTxt h2 {
+            font-size: 20px;
+            width: 270px;
+        }
+    }
+
+    .popup {
+        padding: 0;
+        
+    }
+
+    .popup-content {
+        margin: 0;
+        width: 275px;
+
+        img {
+            width: 150px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        h3, li, p {
+            font-size: 15px;
+        }
+    }
+
+    .popup-contentCongrats {
+        margin: 0;
+        width: 320px;
+        padding: 20px;
+
+        h2 {
+            font-size: 30px;
+            width: 270px; 
+        }
+
+        img {
+            width: 20px;
+        }
+    }
+
+    .popup-contentDefeat {
+        margin: 0;
+        width: 320px;
+        padding: 20px;
+
+        h2 {
+            font-size: 30px;
+            width: 270px; 
+        }
+
+        img {
+            width: 20px;
+        }
+    }
+}
+
+
+/* Media Query para dispositivos maiores que 425 e menor que 768 */
+@media (min-width: 425px) and (max-width: 768px) {
+    .keyboard {
+        padding: 0px;
+        padding-top: 10px;
+
+        .keys {
+            width: 30px;
+            height: 40px;
+            font-size: 18px;
+        }
+
+        .enter,
+        .delete {
+            width: 50px;
+            height: 40px;
+            
+        }
+
+        .enter {
+            font-size: 12px;
+        }
+
+        .delete {
+            font-size: 16px;
+        }
+    }
+
+    .grid {
+        max-width: 300px;
+        height: 400px;
+
+
+        .row {
+            max-height: 56px;
+        }
+    }
+
+    .message {
+        top: 15%;
+    }
+
+    footer {
+        .credits {
+            font-size: 15px;
+        }
+    }
+
+    .gameName {
+        justify-content: start;
+
+        h1 {
+            font-size: 30px;
+            letter-spacing: 5px;
+
+
+        }
+
+        img {
+            width: 45px;
+        }
+    }
+
+    .menuContent {
+        width: 275px;
+
+        .logo {
+            h1 {
+                font-size: 45px;
+                letter-spacing: 5px;
+            }
+
+        }
+
+        img {
+            width: 60px;
+        }
+
+        .menuTxt h2 {
+            font-size: 20px;
+            width: 270px;
+        }
+    }
+
+    .popup {
+        padding: 0;
+        
+    }
+
+    .popup-content {
+        width: 275px;
+
+
+        img {
+            width: 150px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        h3, li, p {
+            font-size: 15px;
+        }
+    }
+}
+
+/* Media Query para dispositivos maiores que 1200px (desktops grandes) */
+/* @media (max-width: 562px) {
+    .container {
+      width: 1140px;
+    }
+  } */

@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+.message {
+    position: fixed;
+    z-index: 1000;
+    width: 200px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    padding: 10px;
+    left: 50%;
+    top: 11%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.9s ease; /* Transição suave para opacidade */
+}
+
+.message.show {
+    opacity: 1; /* Torna visível quando a classe 'show' é adicionada */
+}
+
+.messageTxt {
+    font-family: "Red Hat Display";
+    color: white;
+    text-align: center;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+

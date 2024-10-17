@@ -1,0 +1,67 @@
+.toolbar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: lightgray 2px solid;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-radius: 8px;
+}
+
+h1 {
+    font-family: "Red Hat Display";
+    font-size: 30px;
+}
+
+.gameName {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 55px;
+    }
+
+    h1 {
+        letter-spacing: 10px;
+        margin-left: 2px;
+        font-family: "Ruda", sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+
+.howToPlay {
+    width: 40px;
+    height: 58px;
+    font-size: 1.25em; 
+    flex: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 1;
+    margin: 0 6px 0 0;
+    border: 0;
+    border-radius: 4px;
+    background-color: white;
+
+    img {
+        width: 35px;
+    }
+}
+
+#openMenu {
+    max-width: 200px;
+    background-color: transparent;
+}
+
+#buttonsToolbar {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+}

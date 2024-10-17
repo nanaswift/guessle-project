@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guessle</title>
+  <link rel="stylesheet" href="src/css/keyboard.css">
+  <link rel="stylesheet" href="src/css/mainGrid.css">
+  <link rel="stylesheet" href="src/css/reset.css">
+  <link rel="stylesheet" href="src/css/header.css">
+  <link rel="stylesheet" href="src/css/body.css">
+  <link rel="stylesheet" href="src/css/rules.css">
+  <link rel="stylesheet" href="src/css/congrats.css">
+  <link rel="stylesheet" href="src/css/defeat.css">
+  <link rel="stylesheet" href="src/css/message.css">
+  <link rel="stylesheet" href="src/css/menu.css" />
+  <link rel="stylesheet" href="src/css/rulesMenu.css">
+  <link rel="stylesheet" href="src/css/mediaQuery.css">
+
+  <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <header>
+
+    <section class="toolbar">
+
+      <button class="gameName" id="openMenu">
+        <img src="src/img/android-chrome-512x512.png" class="logoImg" />
+        <h1>uessle</h1>
+      </button>
+
+      <div id="buttonsToolbar">
+        <button class="howToPlay" onclick="location.reload()"><img src="src/img/play-again.png" /></button>
+        <button class="howToPlay" id="open-popup"><img src="src/img/question.png"></button>
+      </div>
+
+
+    </section>
+
+  </header>
+
+  <script src="src/js/rules.js"></script>
+  <script src="src/js/congrats.js"></script>
+  <script src="src/js/copiarURL.js"></script>
+  <script src="src/js/rulesMenu.js"></script>
+
+
+  <!-- home screen-->
+
+  <div id="popupMenu" style="display: none;">
+
+    <div class="popup-content">
+
+      <span class="close-buttonMenu">&times;</span>
+      <h2>How to Play</h2>
+      <h3 id="guessTheWord">Guess the word in 6 tries.</h3>
+      <ul>
+        <li>Each guess must be a valid 5-letter word.</li>
+        <li>
+          The color of the tiles will change to show how close your guess was
+          to the word.
+        </li>
+      </ul>
+
+      <h3 id="examples"><b>Examples</b></h3>
+      <img src="src/img/wordy.png" alt="" />
+      <p><b>W</b> is in the word and in the correct spot.</p>
+      <img src="src/img/light.png" alt="" />
+      <p><b>I</b> is in the word but is in the wrong spot.</p>
+      <img src="src/img/rogue.png" alt="" />
+      <p><b>U</b> is not in the word in any spot.</p>
+
+    </div>
+
+  </div>
+  <!-- escondidinho acaba aq -->
+
+  <!-- menu -->
+  <div class="containerMenu" id="containerMenu" style="display: flex;">
+
+    <div class="menuContent">
+
+      <div class="logo">
+        <img src="src/img/android-chrome-512x512.png" class="logoImg" />
+        <h1>uessle</h1>
+      </div>
+
+      <div class="menuTxt">
+        <h2>
+          You got 6 chances to guess <br> the 5-letter word!
+        </h2>
+        <h2>
+          Show your skills and work!!!
+        </h2>
+      </div>
+
+      <div class="buttons">
+
+        <button class="menuButton" id="playButton">
+          <p>Play</p>
+        </button>
+
+        <button class="menuButton" id="open-popupMenu">How to Play</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- home screen-->
+
+
+
+
+  <!-- hot to play pop-up -->
+  <div id="popup" style="display: none;">
+
+    <div class="popup-content">
+
+      <span class="close-button">&times;</span>
+      <h2>How to Play</h2>
+      <h3 id="guessTheWord">Guess the word in 6 tries.</h3>
+      <ul>
+        <li>Each guess must be a valid 5-letter word.</li>
+        <li>
+          The color of the tiles will change to show how close your guess was
+          to the word.
+        </li>
+      </ul>
+
+      <h3 id="examples"><b>Examples</b></h3>
+      <img src="src/img/wordy.png" alt="" />
+      <p><b>W</b> is in the word and in the correct spot.</p>
+      <img src="src/img/light.png" alt="" />
+      <p><b>I</b> is in the word but is in the wrong spot.</p>
+      <img src="src/img/rogue.png" alt="" />
+      <p><b>U</b> is not in the word in any spot.</p>
+
+    </div>
+
+  </div>
+
+  <!-- congrats pop-up -->
+  <div id="popupCongrats" style="display: none">
+
+    <div class="popup-contentCongrats">
+      <img src="src/img/congrats.png" id="congratsImg" />
+
+      <span class="close-button">&times;</span>
+      <h2>Congratulations!</h2>
+      <h3 id="guessTheWord">You guessed the word.</h3>
+
+      <h3 id="correctWord">The word was <span id="wordToGuessCongrats"></span></h3>
+
+      <div id="buttons">
+        <button onclick="copyURL()" id="congratsButton">
+          <img src="src/img/share.png" />
+          <p>Share</p>
+        </button>
+
+        <button id="congratsButton" onclick="location.reload()">
+          <img src="src/img/play-again.png" />
+          <p>Play again</p>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+
+  <!-- defeat pop-up -->
+  <div id="popupDefeat" style="display: none;">
+
+    <div class="popup-contentDefeat">
+      <img id="defeatImg" src="src/img/defeat.png">
+      <span class="close-button">&times;</span>
+      <h2>Thanks for playing!</h2>
+      <h3 id="guessTheWord">You didn't guessed the word.</h3>
+
+      <h3 id="correctWord">The word was <span id="wordToGuessDefeat"></span></h3>
+
+      <div id="buttons">
+        <button onclick="copyURL()" id="defeatButton">
+          <img src="src/img/share.png">
+          <p>Share</p>
+        </button>
+
+        <button onclick="location.reload()" id="defeatButton">
+          <img src="src/img/play-again.png">
+          <p>Play again</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- message not in word list -->
+  <div class="message" id="notInWordList" style="display: none;">
+    <div class="messageTxt">
+      <p>Not in word list.</p>
+    </div>
+  </div>
+
+  <!-- message not enough letters -->
+  <div class="message" id="notEnoughLetters" style="display: none;">
+    <div class="messageTxt">
+      <p>Not enough letters.</p>
+    </div>
+  </div>
+
+
+  <!-- message 1try-->
+  <div class="message" id="1try" style="display: none;">
+    <div class="messageTxt">
+      <p>Genius.</p>
+    </div>
+  </div>
+
+  <div class="message" id="2try" style="display: none;">
+    <div class="messageTxt">
+      <p>Magnificent.</p>
+    </div>
+  </div>
+
+  <div class="message" id="3try" style="display: none;">
+    <div class="messageTxt">
+      <p>Impressive.</p>
+    </div>
+  </div>
+
+  <div class="message" id="4try" style="display: none;">
+    <div class="messageTxt">
+      <p>Splendid.</p>
+    </div>
+  </div>
+
+  <div class="message" id="5try" style="display: none;">
+    <div class="messageTxt">
+      <p>Great.</p>
+    </div>
+  </div>
+
+  <div class="message" id="6try" style="display: none;">
+    <div class="messageTxt">
+      <p>Phew.</p>
+    </div>
+  </div>
+
+  <div class="message" id="7try" style="display: none;">
+    <div class="messageTxt">
+      <p>:(</p>
+    </div>
+  </div>
+
+  <!-- link copied -->
+  <div class="message" id="linkCopied" style="display: none;">
+    <div class="messageTxt">
+      <p>:(</p>
+    </div>
+  </div>
+
+  <div class="message" id="linkError" style="display: none;">
+    <div class="messageTxt">
+      <p>:(</p>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="container">
+      <div class="grid">
+        <div class="rowGrid1 row">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+
+        <div class="rowGrid2 row">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+
+        <div class="rowGrid3 row">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+
+        <div class="rowGrid4 row">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+
+        <div class="rowGrid5 row">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+
+        <div class="rowGrid6 row">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+      </div><!-- .grid -->
+
+      <div class="keyCentralizer">
+ <div class="keyboard">
+        <div class="row1">
+          <button class="key1 keys">Q</button>
+          <button class="key2 keys">W</button>
+          <button class="key3 keys">E</button>
+          <button class="key4 keys">R</button>
+          <button class="key5 keys">T</button>
+          <button class="key6 keys">Y</button>
+          <button class="key7 keys">U</button>
+          <button class="key8 keys">I</button>
+          <button class="key9 keys">O</button>
+          <button class="key10 keys">P</button>
+        </div>
+
+        <div class="row2">
+          <button class="key11 keys">A</button>
+          <button class="key12 keys">S</button>
+          <button class="key13 keys">D</button>
+          <button class="key14 keys">F</button>
+          <button class="key15 keys">G</button>
+          <button class="key16 keys">H</button>
+          <button class="key17 keys">J</button>
+          <button class="key18 keys">K</button>
+          <button class="key19 keys">L</button>
+        </div>
+
+        <div class="row3">
+          <button class="enter">ENTER</button>
+          <button class="key21 keys">Z</button>
+          <button class="key22 keys">X</button>
+          <button class="key23 keys">C</button>
+          <button class="key24 keys">V</button>
+          <button class="key25 keys">B</button>
+          <button class="key26 keys">N</button>
+          <button class="key27 keys"><p>M</p></button>
+          <button class="delete">⌫</button>
+        </div>
+      </div> 
+      <!-- .keyboard -->
+      </div>
+     
+    </div>
+  </div> <!-- .mainContainer -->
+
+  <textarea id="testURL" style="position: absolute; left: -9999px;">https://nanaswift.github.io/guessle-project/</textarea>
+
+
+  <footer>
+      <div class="credits">
+        <div class="madeBy">
+          <p id="madeBy">Made by Giovanna M. B. and Henri M. B.</p>
+        </div>
+
+        <div class="copyright">
+          <p id="copyright">Copyright &copy; 2024 IFSP-CAR</p>
+        </div>
+      </div>
+  </footer>
+
+
+  <script src="src/js/game.js"></script>
+</body>
+
+</html>

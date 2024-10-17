@@ -1,0 +1,62 @@
+.container {
+    width: 100%;
+    max-width: var(--game-max-width);
+    margin: 0 auto;
+    height: calc(100% - var(--header-height));
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    overflow: hidden;
+    max-height: calc(100% - 210px - var(--header-height));
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 380px;
+    height: 450px;
+    margin: auto;
+}
+
+.rowGrid1,
+.rowGrid2,
+.rowGrid3,
+.rowGrid4,
+.rowGrid5, .rowGrid6 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+
+}
+
+.tile {
+    border: 2px solid rgb(176, 176, 176);
+    border-radius: 5px;
+    font-family: "Red Hat Display";
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.correct {
+    background-color: #90EE90;
+}
+
+.other {
+    background-color: #FCF55F;
+}
+
+.wrong {
+    background-color: rgb(193, 193, 193);
+}
