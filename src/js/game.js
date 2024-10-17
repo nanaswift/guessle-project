@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    //    const word = ["SHEEP", "ARENA", "PITCH", "BROWN", "FUNNY", "LARGE", "CRUEL", "FAINT", "PAUSE", "SWING", "FLUSH", "BRICK", "QUEST", "SLUMP", "TRAIT", "ROUGH", "ALBUM", "HOVER", "COURT", "DRESS", "CHIEF", "FRUIT", "SOLVE", "PLEAD", "RADIO", "ERROR", "PATCH", "MOVIE", "SMALL", "FRAUD", "SHOCK", "SPARE", "COLOR", "GIANT", "PLANT", "CHAOS", "MAJOR", "MOUTH", "RELAX", "SHIFT", "WRECK", "ANGLE", "SHAPE", "FIRST", "WOMAN", "AWARD", "STEEL", "WHEAT", "START", "FEAST"];
-    //    const wordToGuess = word[Math.floor(Math.random() * 49)];
-    const wordToGuess = "ARENA"
+    const word = ["SHEEP", "ARENA", "PITCH", "BROWN", "FUNNY", "LARGE", "CRUEL", "FAINT", "PAUSE", "SWING", "FLUSH", "BRICK", "QUEST", "SLUMP", "TRAIT", "ROUGH", "ALBUM", "HOVER", "COURT", "DRESS", "CHIEF", "FRUIT", "SOLVE", "PLEAD", "RADIO", "ERROR", "PATCH", "MOVIE", "SMALL", "FRAUD", "SHOCK", "SPARE", "COLOR", "GIANT", "PLANT", "CHAOS", "MAJOR", "MOUTH", "RELAX", "SHIFT", "WRECK", "ANGLE", "SHAPE", "FIRST", "WOMAN", "AWARD", "STEEL", "WHEAT", "START", "FEAST"];
+    const wordToGuess = word[Math.floor(Math.random() * 49)];
     let currentRow = 0;
     let currentTile = 0;
     const maxAttempts = 6;
